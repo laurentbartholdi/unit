@@ -1,0 +1,23 @@
+====================  Fichier personnel d'unites  ====================
+.
+Chaque utilisateur peut avoir, s'il le desire, son propre fichier d'unites
+pour pouvoir le modifier a volonte.  Il s'appelle unit.dta et doit resider
+dans le repertoire courant.  C'est un fichier code binaire.  
+S'il existe, il est automatiquement pris a la place du fichier du systeme.
+Pour le creer la premiere fois, il faut utiliser `unit2me',
+sinon il ne contiendra aucune des unites du systeme !
+.
+On peut ajouter de nouvelles unites a ce fichier avec la commande WRITE dans
+unit.  On peut aussi utiliser les commandes vms suivantes :
+.
+    unit2me   recopie le fichier unit.dta du systeme dans le repertoire de
+              l'utilisateur.
+.
+    unit2asc  Cree une copie ascii (unit.asc) du fichier binaire.  
+              Cette version peut facilement etre editee (edit, lse etc).
+.
+    unit2bin  Recree une version binaire (unit.dta) a partir du fichier
+              ascii (unit.asc).  Cette operation est necessaire apres une
+              modification du fichier ascii.
+.
+-------->  Voir aussi  COMMANDS,  EXEMPLE,  NEW

@@ -1,0 +1,22 @@
+=======================  A r i t h m e t i q u e  =======================
+.     
+Les commandes  AOS(infix), PREFIX et POSTFIX  permettent de choisir la notation.
+.     
+Les operations arithmetiques sont :    +  -  *  /  ^  SQRT  INV  
+                                       LN  LOG  L2  EXP
+                                       SIN  COS  TAN  ACOS  ASIN  ATAN
+.
+Tous les calculs se font avec une precision interne de 15 decimales, 
+l'exposant etant limite a +-308.  On peut changer la precision de l'affichage
+avec la commande <nombre de chiffres> DIG ou DIGITS.
+.
+Exemples :  AOS 3 FOOT + 4 INCH EN CM
+            12 V * 5 A EN W
+            POSTFIX  7 M2  3 DM2 + SQRT EN MM2
+.     
+Restrictions :  SQRT ne peut porter que sur des unites d'exposants pairs
+                     ex. 4 M2 SQRT
+                SIN COS TAN ne peuvent etre utilises que pour des arcs
+                     ex  5 RADIAN SIN
+                Les arguments de LN LOG et L2 doivent etre positifs.
+--------->  Voir aussi  dir *,  exemple,  macro

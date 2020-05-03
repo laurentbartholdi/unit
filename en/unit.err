@@ -1,0 +1,33 @@
+Unknown error
+Incompatible units
+Stack underflow
+Invalid square root
+Invalid inverse
+Syntax error or unknown unit
+Square root of odd unit
+Divide by zero
+Unit not found
+Too high recursion level (maximum 8)
+Mismatch in {[( and )]}
+File not found
+Missing operator
+Invalid exponentiation
+Disk write error
+Reserved word
+Stack overflow
+No () allowed in postfix mode
+Missing ()
+Too many ()
+Buffer memory overflow (infix mode)
+String too long -- maximum 10 chars
+Trigonometric functions require an angle
+Invalid logarithm
+No units allowed for trigonometric and transcendental functions
+Argument must be smaller than 1
+Two operators follow themselves
+Two numbers follow themselves
+Time, Angle or un-united number required for .DMS
+Definition of void unit
+Floating point overflow/underflow
+Macro space overflow
+Last command should be first terminated
