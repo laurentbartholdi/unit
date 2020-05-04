@@ -1630,7 +1630,7 @@ int	dispatch( char s[] )
 void	execute( char s[] )
 {
 	double	f;
-	/* int	i; */
+	int	i;
 
 	if( flags == MACROF )
 	{
@@ -1638,7 +1638,7 @@ void	execute( char s[] )
 		return;
 	}
 
-	if( sscanf( s, "%lf", &f ) && cmp( s, "+" ) && cmp( s, "-" ) )
+	if( sscanf( s, "%lf%n", &f, &i ) && i == strlen(s) && cmp( s, "+" ) && cmp( s, "-" ) ) /* added by LB, 20200504: check if all input was read */
 	{
 		donum( f );
 		return;

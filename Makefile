@@ -15,7 +15,8 @@ unit.dta: bin unit.asc
 	./bin
 
 test: unit unit.dta
-	sh ./test.sh
+	sh ./test.sh > unit-test.log
+	diff unit-test.log.orig unit-test.log
 
 install: unit.dta
 	mkdir -p $(UNIT_HOME)

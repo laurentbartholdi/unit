@@ -1,0 +1,56 @@
+
+Testing :
+ 12 mm en yard  last en pt
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 0.0131	yard
+34.1	pt
+
+Testing :
+ 12.4 v 5.2 a * en w  last 15 s * en kcal last en j  last en gev
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 64.5	w
+0.231	kcal
+967	j
+6.05E+12	gev
+
+Testing :
+ : vsphere  3 ^  4 pi *  3 / ;  1 m vsphere en m3
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 4.19	m3
+
+Testing :
+ 1 mu vs en mm3
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 4.19E-09	mm3
+
+Testing :
+ infix 3.2 v * 5.9 a en kw
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 0.0189	kw
+
+Testing :
+ infix 3.2 v * 5.9 a * 2 hr en kwh  last en kcal  last en gev
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 0.0378	kwh
+32.5	kcal
+8.5E+14	gev
+
+Testing :
+ infix 1000 j def kjoule  3.2 v * 5.9 a * 2 hr en kjoule
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 136	kjoule
+
+Testing :
+ infix 800 kilo j def p.muesli  82 kgf * 2000 m en p.muesli  last ?
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 2.01	p.muesli
+MKSA exponents: [ Kg M2 S-2 ]
+Equivalent units: 
+            BTU            CAL            CVH            ERG             EV
+        FOOTPND            GEV              J           KCAL            KEV
+            KGM            KWH            MEV       p.muesli
+
+Testing :
+ 1 quit
+UNIT version 1.06, 18.06.90  (C)1990  L. Bartholdi
+   ! 
