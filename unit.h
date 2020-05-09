@@ -33,7 +33,7 @@ typedef	struct {
 #define	FU	METER
 #define	LU	(STERADIAN+1)
 #define	ERRNUM	33
-#define	HLPNUM	23
+#define	HLPNUM	65
 #define	MAXMACNUM	50
 #define	MAXMACLEN	200
 #define	VER	"1.06"

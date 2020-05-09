@@ -41,7 +41,7 @@ int	stricmp( char *a, char *b )
 #include        <unistd.h>
 #include	"unit.h"
 
-/*         double sqrt(double x);
+/*       double sqrt(double x);
          double sin(double x);
          double cos(double x);
          double tan(double x);
@@ -74,14 +74,14 @@ void	Read_err()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.err","rt" ) ) != NULL;
 
 	for( i = 0; i < ERRNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -214,14 +214,14 @@ void Read_help()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.help","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -237,14 +237,14 @@ void Read_hlpa()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpa","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -260,14 +260,14 @@ void Read_hlpc()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpc","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -283,14 +283,14 @@ void Read_hlpe()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpe","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -306,14 +306,14 @@ void Read_hlpf()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpf","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -329,14 +329,14 @@ void Read_hlpm()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpm","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -352,14 +352,14 @@ void Read_hlpn()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlpn","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -375,14 +375,14 @@ void Read_hlps()
 	FILE	*f;
 	/* UNITY	u; */
 	int	i, success = 1;
-	char	s[81];
+	char	s[121];
 
 	success = ( f = localfopen( "unit.hlps","rt" ) ) != NULL;
 
 	for( i = 0; i < HLPNUM; i++ )
 	{
 		if( success )
-			success = fgets( s, 80, f ) != NULL;
+			success = fgets( s, 120, f ) != NULL;
 		if( success )
 		{
 			s[strlen(s)-1] = 0;	/* delete the \n */
@@ -541,7 +541,7 @@ void	loadinit()
 	UNITY	u;
 	/* int	i; */
 	int    success = 1;
-	/* char	s[81]; */
+	/* char	s[121]; */
 
 	if( ( f = fopen( "unit.dta","rb" ) ) == NULL )
 	if( ( f = localfopen( "unit.dta","rb" ) ) == NULL )
@@ -1139,7 +1139,7 @@ void	getexp( EXPARR exp, char s[] )
 
 void	printexp( EXPARR exp )
 {
-	char	s[80];
+	char	s[120];
 
 	getexp( exp, s );
 
@@ -1276,7 +1276,7 @@ void	dodup()
 
 double	frac( double x )
 {
-	return( x - floor(x) );
+	return( x - trunc(x) );
 }
 
 void	putdms()
@@ -1284,7 +1284,7 @@ void	putdms()
 	STKEL	x;
 	int	hr, min, sec;
 	EXPARR	_angle = { 0,0,0,0,0,0,0,0,1,0 },
-		_time = { 0,0,1,0,0,0,0,0,0,0 };
+		_time  = { 0,0,1,0,0,0,0,0,0,0 };
 
 	reduce();
 	pop( &x );
@@ -1303,11 +1303,15 @@ void	putdms()
 	else	if( !eq( x.exp, _time ) )
 		error( 28 );
 
-	hr = x.f / 3600;
-	min = frac(x.f) * 60;
-	sec = frac(frac(x.f) * 60) * 60;
+	hr  = x.f / 3600;
+	min = abs(frac( x.f / 3600.0 ) * 60);
+	sec = abs(round(frac( frac(x.f/3600.0) * 60 ) * 60));
 
-	printf( " %d* %d' %d\"\n", hr, min, sec );
+	if( sec == 60 ) { min = min + hr / abs(hr); sec = 0; }
+	if( min == 60 ) { hr  = hr + hr / abs(hr) ; min = 0; }
+
+	printf( " %d* %d' %d\"     ", hr, min, sec );
+	printf( " %d:%02d:%02d\n", hr, min, sec );
 }
 
 void	dir1()
