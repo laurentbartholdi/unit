@@ -1,0 +1,24 @@
+= help =========================  U N I T ==========     (C)1990 L. Bartholdi
+.    
+Ce programme permet de faire des conversions d'unités d'un système dans un
+autre, de l'arithmétique sur des "unités" diverses pour autant que l'opération
+ait un sens, de créer de nouvelles unités et de les sauver dans un fichier.
+.  
+Toutes les commandes peuvent âtre entrées en minuscules ou en majuscules. Les 
+instructions sont soit des commandes (DIR, HELP etc), soit des conversions.
+.  
+Les conversions sont de la forme   <expression> EN <unité>.
+On obtient toutes les unités 'équivalentes' avec  <expression> ?  ( 2 m ? ).
+.    
+-  TO, INTO sont des synonymes de EN
+-  <expression> est une expression arithmétique pouvant faire intervenir
+               une ou plusieurs unités, en mode prefix, infix/AOS ou postfix (def)
+.    
+Autres aides :   ARITH ou MATH       opérations arithmétiques
+                 COMMANDES           liste les commandes à disposition
+                 ERR ou ERREURS      liste tous les messages d'erreurs
+                 EXEMPLE ou EXAMPLE  montre quelques exemples
+                 MACRO               écriture de macros 
+                 NEW                 création de nouvelles unités
+                 SAVE                sauvetage des unités crées sur le disque
+

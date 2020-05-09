@@ -1,0 +1,33 @@
+Erreur inconnue
+Unités incompatibles
+Pile vide
+Racine carrée d'un nombre négatif
+Inverse de zéro
+Unité inconnue ou Erreur de syntaxe
+Racine carrée d'une unité de puissance impaire
+Division par zéro
+Unité pas trouvée
+Profondeur de récursion trop élevée (maximum 8)
+Parenthèses mal appairées {[( et )]}
+Fichier introuvable
+Opérateur manquant
+Exponentiation impossible
+Erreur d'écriture sur le disque
+Mot réservé
+Dépassement de capacité de la pile
+() interdite en mode postfix
+() manquante
+Trop de ()
+Dépassement de mémoire dans le tampon (mode infix)
+Chaîne de caractères trop longue -- maximum 10 chars
+Fonction trigonométrique demande un angle
+Logarithme d'un nombre négatif
+Les fonctions trigonométrique. et transcendantales ne peuvent porter sur des unités
+L'argument doit être plus petit ou égal a 1 (en valeur absolue)
+Deux opérateurs consécutifs
+Deux nombres consécutifs
+.DMS demande un temps, un angle ou un 'sans unité'
+Définition d'une unité 'vide'
+Dépassement (trop grand ou trop petit) en calcul flottant
+Dépassement de la place mémoire pour les macros
+La commande précédente doit d'abord être terminée

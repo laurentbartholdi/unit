@@ -1,0 +1,17 @@
+= EXEMPLE2 =======================  Autres exemples  ========================  
+.
+   1 ua  1 pc /  1 radian *  INTO ''                  ! on doit avoir 1.000000 ...
+.
+   infix ( 1 lsol / ( 1 ua2 * 4 pi ) ) * 1 m2  en w   ! constante solaire 
+.
+   postfix
+   : vs  3 ^  4 pi *  3 /  ;            ! volume d'une sphère
+   1 msol  1 rsol  vs /  en kg/l        ! densité moyenne du soleil
+.
+On peut enfin définir des constantes :    <valeur> VAR <nom> 
+que l'on utilise sans coefficient :
+.
+1 msol VAR msoleil   1 rsol VAR rsoleil   rsoleil vs VAR vsoleil
+msoleil vsoleil / en kg/l   etc.
+.
+-------->  Voir aussi  commandes,  math,  macro,  save .

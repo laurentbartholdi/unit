@@ -1,0 +1,17 @@
+= COMMANDE ====================  C o m m a n d e s  =====================
+.
+     .  imprime la valeur sur la pile en unité MKSA (résultat d'une expression)
+     ?  imprime la valeur sur la pile et donne toutes les unités équivalentes
+  .DMS  imprime la valeur sur la pile en sexagésimal ( d/h, minutes, secondes)
+   CHS  change le signe de la valeur au sommet de la pile
+ CLEAR  vide le contenu de la pile
+   DIR  <s> liste toutes les unités commençant par <s> (= LIST)
+   DIR  *   liste toutes les unités dans le système (= DIR)
+   DUP  duplifie le sommet de la pile
+  EXIT  pour sortir du programme (= EX, FIN, HALT, QUIT, STOP)
+  LAST  reprend la dernière valeur entrée
+  SWAP  échange les deux valeurs au sommet de la pile
+REDUCE  réduit les parenthèses encore ouvertes
+.
+------>  Voir aussi  MATH,  NEW,  SAVE.
+

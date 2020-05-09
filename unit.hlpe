@@ -1,0 +1,24 @@
+= EXEMPLE ========================  Quelques exemples  =========================
+.
+$ unit
+UNIT version 1.06, 18.06.90               
+[ 0] 1 msol en melectron                2.183E+60        melec
+[ 0] last en mproton                    1.189E+57        mproton
+[ 0] 1.e11 msol def mgalaxie          ! on définit une nouvelle unité
+[ 0] 1 mgalaxie en melectron            2.183E+71        melec
+[ 0] infix   12 v * 4.654 a en w        55.848        w
+[ 0] last * 45 s en kwh                 6.9810000000E-04        kwh
+[ 0] last ?                           ! donne les unités équivalentes
+---------------------------------------------------------------------------
+MKSA exponents: [ Kg M2 S-2 ]
+Équivalent units: 
+            BTU            CAL            CVH            ERG             EV
+        FOOTPND            GEV              J           KCAL            KEV
+            KGM            KWH            MEV
+---------------------------------------------------------------------------
+[ 1] en btu                             2.383995143        btu
+[ 0] last en gev                        1.5707250000E+13   gev
+[ 0] 100 gev en btu                     1.5177673642E-11   btu
+[ 0] quit
+$ !  retour au système           -------->  Voir aussi exemple2 (suite)
+
