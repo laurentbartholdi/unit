@@ -1,21 +1,22 @@
-====================  Addition de nouvelles unites  ====================
+= NEW ===================  Addition de nouvelles unités  ====================
 .
-On peut ajouter de nouvelles unites au systeme avec la commande :
+On peut ajouter de nouvelles unités au système avec la commande :
 .
-            <expression>                 DEF <nom de la nouvelle unite>
-ou          <expression> <offset> OFFSET DEF <nom de la nouvelle unite>
+            <expression>                 DEF <nom de la nouvelle unité>
+ou          <expression> <offset> OFFSET DEF <nom de la nouvelle unité>
 .
 Exemples :
             25.4 MM  DEF INCH
             1 V  1 A  *  DEF W
-            1 K  273 K OFFSET DEF C     (ces deux unites sont deja definies!)
+            1 K  273 K OFFSET DEF C     (ces deux unités sont déjà  définies!)
 .
-Ces definitions sont provisoires.  Elles sont perdues en sortant du programme.
-En remplacant  DEF  par  WRITE , les nouvelles unites sont ajoutees a votre
-propre fichier d'unites (qui est cree, mais vide, a ce moment s'il n'existe 
+Ces définitions sont provisoires.  Elles sont perdues en sortant du programme.
+En remplaçant  DEF  par  WRITE , les nouvelles unités sont ajoutées à votre
+propre fichier d'unités (qui est crée, mais vide, à ce moment s'il n'existe 
 pas encore).
 .
-La commande unix `unit2me'  permet de copier dans son repertoire le fichier
-d'unites du systeme.
+La commande shell  "unit2me"  permet de copier dans son répertoire le fichier
+d'unités du système.
 .
--------->  Voir aussi  MATH,  SAVE (pour utiliser son propre fichier d'unites)
+-------->  Voir aussi  MATH,  SAVE (pour utiliser son propre fichier d'unités)
+.

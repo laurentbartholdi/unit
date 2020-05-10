@@ -1,195 +1,204 @@
 
-                    *****<   Conversions d'unites   >*****
+                    *****<   Conversions d'unités   >*****
 
 Pour ceux que les conversions de W en BTU/S ou de KG/CM2 en POUND/SQINCH
-rendent inquiets, le programme 'UNIT' est a disposition sur les vax uni2a,
-sc2a, cmu et obs.  
+rendent inquiets, le programme 'unit' est à disposition dans unix, termux.  
 
-Pour l'utiliser, il faut appeler :
+"unit" est distribué sur github.  
+Il faut éventuellement modifier les variables  UNIT_HOME et UNIT_HOME_BIN 
+dans le fichier Makefile avant d'exécuter make. 
+UNIT_HOME_BIN doit être dans le PATH.
 
-uni2a :   $ @gen$:[bartho.unitc]unit_init
-sc2a  :   $ @astro$:[bartho.unitc]unit_init 
-cmu   :   $ @ua$:[bartho.unitc]unit_init
-obs   :   ...   RIEN (c'est deja fait automatiquement pour tout le monde)
-
-qui definit quelques variables (necessaire une fois par session).
+  $ make             # compile les 3 exécutables bin, data et unit
+                     # exécute bin pour produire le fichier unit.dta
+                     # exécute test.sh pour vérifier que tout est en ordre.
+  $ make install     # installe les fichiers d'aide et unit.dta
+                     # dans $HOME_UNIT, et exécutable "unit" dans $HOME_UNIT_BIN.
 
 Par la suite, il suffit d'appeler      $ unit 
 
-Les lignes qui suivent sont tirees des fichiers d'aide que l'on obtient
-a l'ecran avec  HELP  ou AIDE ...   
+Les lignes qui suivent sont tirées des fichiers d'aide que l'on obtient
+à l'écran avec  HELP  ou AIDE ...   
 
-DIR liste toutes les unites connues du programme a ce moment.
+DIR liste toutes les unités connues du programme a ce moment.
 
-Tout commentaire a :    ugobs::bartho  ou  bartho@obs.unige.ch  .
 -----------------------------------------------------------------------------
+
 = help =========================  U N I T ==========     (C)1990 L. Bartholdi
 .    
-Ce programme permet de faire des conversions d'unites d'un systeme dans un
-autre, de l'arithmetique sur des UNITES diverses pour autant que l'operation
-ait un sens, de creer de nouvelles unites et de les sauver dans un fichier.
+Ce programme permet de faire des conversions d'unités d'un système dans un
+autre, de l'arithmétique sur des "unités" diverses pour autant que l'opération
+ait un sens, de créer de nouvelles unités et de les sauver dans un fichier.
 .  
-Toutes les commandes peuvent etre entrees en minuscules ou en majuscules. Les 
+Toutes les commandes peuvent âtre entrées en minuscules ou en majuscules. Les 
 instructions sont soit des commandes (DIR, HELP etc), soit des conversions.
 .  
-Les conversions sont de la forme   <expression> EN <unite>.
-On obtient toutes les unites 'equivalentes' avec  <expression> ?  ( 2 m ? ).
+Les conversions sont de la forme   <expression> EN <unité>.
+On obtient toutes les unités 'équivalentes' avec  <expression> ?  ( 2 m ? ).
 .    
--  TO, INTO sont des synomymes de EN
--  <expression> est une expression arithmetique pouvant faire intervenir
-               une ou plusieurs unites, en mode prefix, infix ou postfix (def)
+-  TO, INTO sont des synonymes de EN
+-  <expression> est une expression arithmétique pouvant faire intervenir
+               une ou plusieurs unités, en mode prefix, infix/AOS ou postfix (def)
 .    
-Autres aides :   ARITH ou MATH       operations arithmetiques
-                 COMMANDES           liste les commandes a disposition
+Autres aides :   ARITH ou MATH       opérations arithmétiques
+                 COMMANDES           liste les commandes à disposition
                  ERR ou ERREURS      liste tous les messages d'erreurs
                  EXEMPLE ou EXAMPLE  montre quelques exemples
-                 MACRO               ecriture de macros 
-                 NEW                 creation de nouvelles unites
-                 SAVE                sauvetage des unites crees sur le disque
+                 MACRO               écriture de macros 
+                 NEW                 création de nouvelles unités
+                 SAVE                sauvetage des unités crées sur le disque
 
-= MATH ======================  A r i t h m e t i q u e  =======================
+= MATH ======================  A r i t h m é t i q u e  =======================
 .     
-Les commandes  INFIX, PREFIX et POSTFIX  permettent de choisir la notation.
+Les commandes  AOS, PREFIX et POSTFIX  permettent de choisir la notation.
 .     
-Les operations arithmetiques sont :    +  -  *  /  ^  SQRT  INV  
+Les opérations arithmétiques sont :    +  -  *  /  ^  SQRT  INV  
                                        LN  LOG  L2  EXP
                                        SIN  COS  TAN  ACOS  ASIN  ATAN
 .
-Tous les calculs se font avec une precision interne de 15 decimales, 
-l'exposant etant limite a +-308.  On peut changer la precision de l'affichage
+Tous les calculs se font avec une précision interne de 15 décimales, 
+l'exposant étant limite a +-308.  On peut changer la précision de l'affichage
 avec la commande <nombre de chiffres> DIG ou DIGITS.
 .
-Exemples :  INFIX  3 FOOT + 4 INCH EN CM
+Exemples :  AOS  3 FOOT + 4 INCH EN CM
             12 V * 5 A EN W
-            POSTFIX  7 M2  3 DM2 + SQRT EN MM2
+            POSTFIX  7 M2  3 DM2 + SQRT EN MM
 .     
-Restrictions :  SQRT ne peut porter que sur des unites d'exposants pairs
+Restrictions :  SQRT ne peut porter que sur des unités d'exposants pairs
                      ex. 4 M2 SQRT
-                SIN COS TAN ne peuvent etre utilises que pour des arcs
-                     ex  5 RADIAN SIN
-                Les arguments de LN LOG et L2 doivent etre positifs.
+                SIN COS TAN ne peuvent âtre utilises que pour des arcs
+                     ex  5 RADIAN SIN   2 PI RADIAN COS 
+                Les arguments de LN LOG et L2 doivent âtre positifs.
+                L'élévation à une puissance ne peut l'être qu'à 
+                une puissance entière.
+
 --------->  Voir aussi  dir *,  exemple,  macro
 
 = COMMANDE ====================  C o m m a n d e s  =====================
 .
-    .  imprime la valeur sur la pile en unite MKSA (resultat d'une expression)
-    ?  imprime la valeur sur la pile et donne toutes les unites equivalentes
- .DMS  imprime la valeur sur la pile en sexagesimal ( d/h, minutes, secondes)
-  CHS  change le signe de la valeur au sommet de la pile
-CLEAR  vide le contenu de la pile
-  DIR <s> liste toutes les unites commencant par <s> (= LIST)
-  DIR *   liste toutes les unites dans le systeme (= DIR)
-  DUP  duplifie le sommet de la pile
- EXIT  pour sortir du programme (= EX, FIN, HALT, QUIT, STOP)
- LAST  reprend la derniere valeur entree
- SWAP  echange les deux valeurs au sommet de la pile
-REDUCE reduit les parentheses encore ouvertes
+     .  imprime la valeur sur la pile en unité MKSA (résultat d'une expression)
+     ?  imprime la valeur sur la pile et donne toutes les unités équivalentes
+  .DMS  imprime la valeur sur la pile en sexagésimal ( d/h, minutes, secondes)
+   CHS  change le signe de la valeur au sommet de la pile
+ CLEAR  vide le contenu de la pile
+   DIR  <s> liste toutes les unités commençant par <s> (= LIST)
+   DIR  *   liste toutes les unités dans le système (= DIR)
+   DUP  duplifie le sommet de la pile
+  EXIT  pour sortir du programme (= EX, FIN, HALT, QUIT, STOP)
+  LAST  reprend la dernière valeur entrée
+  SWAP  échange les deux valeurs au sommet de la pile
+REDUCE  réduit les parenthèses encore ouvertes
 .
 ------>  Voir aussi  MATH,  NEW,  SAVE.
 
 = EXEMPLE ========================  Quelques exemples  =========================
+.
 $ unit
-UNIT version 1.04, 05/25/90		
-[ 0] 1 msol en melectron		2.183E+60	melec
-[ 0] last en mproton			1.189E+57	mproton
-[ 0] 1.e11 msol def mgalaxie		! on definit une nouvelle unite
-[ 0] 1 mgalaxie en melectron		2.183E+71	melec
-[ 0] infix   12 v * 4.654 a en w	55.848	w
-[ 0] last * 45 s en kwh			6.9810000000E-04	kwh
-[ 0] last ?                             ! donne les unites equivalentes
+UNIT version 1.06, 18.06.90               
+[ 0] 1 msol en melectron                2.183E+60        melec
+[ 0] last en mproton                    1.189E+57        mproton
+[ 0] 1.e11 msol def mgalaxie          ! on définit une nouvelle unité
+[ 0] 1 mgalaxie en melectron            2.183E+71        melec
+[ 0] infix   12 v * 4.654 a en w        55.848        w
+[ 0] last * 45 s en kwh                 6.9810000000E-04        kwh
+[ 0] last ?                           ! donne les unités équivalentes
 ---------------------------------------------------------------------------
 MKSA exponents: [ Kg M2 S-2 ]
-Equivalent units: 
+Équivalent units: 
             BTU            CAL            CVH            ERG             EV
         FOOTPND            GEV              J           KCAL            KEV
             KGM            KWH            MEV
 ---------------------------------------------------------------------------
-[ 1] en btu				2.383995143	btu
-[ 0] last en gev			1.5707250000E+13	gev
-[ 0] 100 gev en btu			1.5177673642E-11	btu
+[ 1] en btu                             2.383995143        btu
+[ 0] last en gev                        1.5707250000E+13   gev
+[ 0] 100 gev en btu                     1.5177673642E-11   btu
 [ 0] quit
-$ !  retour au system vms          -------->  Voir aussi exemple2 (suite)
+$ !  retour au système           -------->  Voir aussi exemple2 (suite)
 
 = EXEMPLE2 =======================  Autres exemples  ========================  
 .
-   1 ua  1 pc /  1 radian *  INTO ''		! on doit avoir 1.000000 ...
+   1 ua  1 pc /  1 radian *  INTO ''                  ! on doit avoir 1.000000 ...
 .
    infix ( 1 lsol / ( 1 ua2 * 4 pi ) ) * 1 m2  en w   ! constante solaire 
 .
    postfix
-   : vs  3 ^  4 pi *  3 /  ;                    ! volume d'une sphere
-   1 msol  1 rsol  vs /  en kg/l                ! densite moyenne du soleil
+   : vs  3 ^  4 pi *  3 /  ;            ! volume d'une sphère
+   1 msol  1 rsol  vs /  en kg/l        ! densité moyenne du soleil
 .
-On peut enfin definir des variables :    <valeur>  VAR <nom> , 
+On peut enfin définir des constantes :    <valeur> VAR <nom> 
 que l'on utilise sans coefficient :
 .
 1 msol VAR msoleil   1 rsol VAR rsoleil   rsoleil vs VAR vsoleil
 msoleil vsoleil / en kg/l   etc.
 .
 -------->  Voir aussi  commandes,  math,  macro,  save .
-= NEW ===================  Addition de nouvelles unites  ====================
 .
-On peut ajouter de nouvelles unites au systeme avec la commande :
+= NEW ===================  Addition de nouvelles unités  ====================
 .
-            <expression>                 DEF <nom de la nouvelle unite>
-ou          <expression> <offset> OFFSET DEF <nom de la nouvelle unite>
+On peut ajouter de nouvelles unités au système avec la commande :
+.
+            <expression>                 DEF <nom de la nouvelle unité>
+ou          <expression> <offset> OFFSET DEF <nom de la nouvelle unité>
 .
 Exemples :
             25.4 MM  DEF INCH
             1 V  1 A  *  DEF W
-            1 K  273 K OFFSET DEF C     (ces deux unites sont deja definies!)
+            1 K  273 K OFFSET DEF C     (ces deux unités sont déjà  définies!)
 .
-Ces definitions sont provisoires.  Elles sont perdues en sortant du programme.
-En remplacant  DEF  par  WRITE , les nouvelles unites sont ajoutees a votre
-propre fichier d'unites (qui est cree, mais vide, a ce moment s'il n'existe 
+Ces définitions sont provisoires.  Elles sont perdues en sortant du programme.
+En remplaçant  DEF  par  WRITE , les nouvelles unités sont ajoutées à votre
+propre fichier d'unités (qui est crée, mais vide, à ce moment s'il n'existe 
 pas encore).
 .
-La commande vms  UNIT2ME  permet de copier dans son repertoire le fichier
-d'unites du systeme.
+La commande shell  "unit2me"  permet de copier dans son répertoire le fichier
+d'unités du système.
 .
--------->  Voir aussi  MATH,  SAVE (pour utiliser son propre fichier d'unites)
+-------->  Voir aussi  MATH,  SAVE (pour utiliser son propre fichier d'unités)
+.
 = MACROS ======================  M a c r o s  =======================  
 .
-On peut remplacer une sequence de commandes apparaissant souvent par une
-macro, simple a definir.
+On peut remplacer une séquence de commandes apparaissant souvent par une
+macro, simple à définir.
 .
-La forme generale est :   : <nom de la macro>  <suite de commandes> ;
+La forme générale est :   : <nom de la macro>  <suite de commandes> ;
 .
-L'utilisation du nom de la macro declanche l'execution de toute la suite des
+L'utilisation du nom de la macro déclanche l'exécution de toute la suite des
 commandes.
 .
 Exemple :  
-On utilise souvent le volume d'une sphere dont on connait le rayon.
-On va definir une macro 'vs' imprimant le volume en m3, quelque soit la forme
-donnee au rayon.
+On utilise souvent le volume d'une sphère dont on connaît le rayon.
+On va définir une macro 'vs' imprimant le volume en m3, quelque soit la forme
+donnée au rayon.
 .
      : vs  3 ^  4 pi *  3 /  en m3  ;
 .
-que l'on utilisera comme :   3 m vs    ou   5 inch vs  ou   1 rsol vs   etc
+que l'on utilisera comme :   3 m vs    ou   5 inch vs  ou   1 rsol vs   etc.
 .
 On peut lister les macros avec la commande LMAC,  et les sauver dans son
-repertoire avec SMAC dans le fichier UNIT.MAC (voir SAVE).
-= SAVE ===================  Fichier personnel d'unites  ====================
+répertoire avec SMAC dans le fichier "unit".mac (voir SAVE).
 .
-Chaque utilisateur peut avoir, s'il le desire, son propre fichier d'unites
-pour pouvoir le modifier a volonte.  Il s'appelle unit.dta et doit resider
-dans le repertoire de base de l'utilisateur (sys$login).  C'est un fichier
-code binaire.  S'il existe, il est automatiquement pris a la place du fichier
-du systeme.  Pour le creer la premiere fois, il faut utiliser UNIT2ME,  sinon
-il ne contiendra aucune des unites du systeme !
+= SAVE ===================  Fichier personnel d'unités  ====================
 .
-On peut ajouter de nouvelles unites a ce fichier avec la commande WRITE dans
-unit.  On peut aussi utiliser les commandes vms suivantes :
+Chaque utilisateur peut avoir, s'il le désire, son propre fichier d'unités
+pour pouvoir le modifier à volonté.  Il s'appelle unit.dta et doit résider
+dans le répertoire de base de l'utilisateur ($HOME).  C'est un fichier
+codé binaire.  S'il existe, il est automatiquement pris à la place du fichier
+du système.  Pour le créer la première fois, il faut utiliser "unit2me",  sinon
+il ne contiendra aucune des unités de base du système !
 .
-    UNIT2ME   recopie le fichier unit.dta du systeme dans le repertoire de
+On peut ajouter de nouvelles unités à ce fichier avec la commande WRITE dans
+unit.  On peut aussi utiliser les commandes shell suivantes :
+.
+    unit2me   recopie le fichier unit.dta du système dans le répertoire de
               l'utilisateur.
 .
-    UNIT2ASC  Cree une copie ascii (unit.asc) du fichier binaire.  
-              Cette version peut facilement etre editee (edit, lse etc).
+    data      Crée une copie ascii (unit.asc) du fichier binaire.  
+              Cette version peut facilement âtre éditée (edit, lse etc).
 .
-    UNIT2BIN  Recree une version binaire (unit.dta) a partir du fichier
-              ascii (unit.asc).  Cette operation est necessaire apres une
+    bin       Recrée une version binaire (unit.dta) à partir du fichier
+              ascii (unit.asc).  Cette opération est nécessaire après une
               modification du fichier ascii.
 .
 -------->  Voir aussi  COMMANDES,  EXEMPLE,  NEW
+.
 =======================================================  fin  ================

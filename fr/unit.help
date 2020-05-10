@@ -1,23 +1,24 @@
-                             U N I T                  (C)1990 L. Bartholdi
+= help =========================  U N I T ==========     (C)1990 L. Bartholdi
 .    
-Ce programme permet de faire des conversions d'unites d'un systeme dans un
-autre, de l'arithmetique sur des UNITES diverses pour autant que l'operation
-ait un sens, de creer de nouvelles unites et de les sauver dans un fichier.
+Ce programme permet de faire des conversions d'unités d'un système dans un
+autre, de l'arithmétique sur des "unités" diverses pour autant que l'opération
+ait un sens, de créer de nouvelles unités et de les sauver dans un fichier.
 .  
-Toutes les commandes peuvent etre entrees en minuscules ou en majuscules. Les 
+Toutes les commandes peuvent âtre entrées en minuscules ou en majuscules. Les 
 instructions sont soit des commandes (DIR, HELP etc), soit des conversions.
 .  
-Les conversions sont de la forme   <expression> EN <unite>.
-On obtient toutes les unites 'equivalentes' avec  <expression> ?  ( 2 m ? ).
+Les conversions sont de la forme   <expression> EN <unité>.
+On obtient toutes les unités 'équivalentes' avec  <expression> ?  ( 2 m ? ).
 .    
--  TO, INTO sont des synomymes de EN
--  <expression> est une expression arithmetique pouvant faire intervenir
-               une ou plusieurs unites, en mode prefix, infix ou postfix (def)
+-  TO, INTO sont des synonymes de EN
+-  <expression> est une expression arithmétique pouvant faire intervenir
+               une ou plusieurs unités, en mode prefix, infix/AOS ou postfix (def)
 .    
-Autres aides :   ARITH ou MATH       operations arithmetiques
-                 COMMANDES           liste les commandes a disposition
+Autres aides :   ARITH ou MATH       opérations arithmétiques
+                 COMMANDES           liste les commandes à disposition
                  ERR ou ERREURS      liste tous les messages d'erreurs
                  EXEMPLE ou EXAMPLE  montre quelques exemples
-                 MACRO               ecriture de macros 
-                 NEW                 creation de nouvelles unites
-                 SAVE                sauvetage des unites crees sur le disque
+                 MACRO               écriture de macros 
+                 NEW                 création de nouvelles unités
+                 SAVE                sauvetage des unités crées sur le disque
+

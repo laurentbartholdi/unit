@@ -1,33 +1,33 @@
 Erreur inconnue
-Unites incompatibles
+Unités incompatibles
 Pile vide
-Racine carree d'un nombre negatif
-Inverse de zero
-Unite inconnue ou Erreur de syntaxe
-Racine carree d'une unite de puissance impaire
-Division par zero
-Unite pas trouvee
-Profondeur de recursion trop elevee (maximum 8)
-Parentheses mal apairees {[( et )]}
+Racine carrée d'un nombre négatif
+Inverse de zéro
+Unité inconnue ou Erreur de syntaxe
+Racine carrée d'une unité de puissance impaire
+Division par zéro
+Unité pas trouvée
+Profondeur de récursion trop élevée (maximum 8)
+Parenthèses mal appairées {[( et )]}
 Fichier introuvable
-Operateur manquant
+Opérateur manquant
 Exponentiation impossible
-Erreur d'ecriture sur le dique
-Mot reserve
-Depassement de capacite de la pile
+Erreur d'écriture sur le disque
+Mot réservé
+Dépassement de capacité de la pile
 () interdite en mode postfix
 () manquante
 Trop de ()
-Depassement de memoire dans le tampon (mode infix)
-Chaine de caracteres trop longue -- maximum 10 chars
-Function trigonometrique demande un angle
-Logarithme d'un nombre negatif
-Les fonctions trig. et transcendentales ne peuvent porter sur des unites
-L'argument doit etre plus petit ou egal a 1 (en valeur absolue)
-Deux operateurs consecutifs
-Deux nombres consecutifs
-.DMS demande un temps, un angle ou un 'sans unite'
-Definition d'une unite 'vide'
-Depassement (trop grand ou trop petit) en calcul flottant
-Depassement de la place memoire pour les macros
-La commande precedente doit d'abord etre terminee
+Dépassement de mémoire dans le tampon (mode infix)
+Chaîne de caractères trop longue -- maximum 10 chars
+Fonction trigonométrique demande un angle
+Logarithme d'un nombre négatif
+Les fonctions trigonométrique. et transcendantales ne peuvent porter sur des unités
+L'argument doit être plus petit ou égal a 1 (en valeur absolue)
+Deux opérateurs consécutifs
+Deux nombres consécutifs
+.DMS demande un temps, un angle ou un 'sans unité'
+Définition d'une unité 'vide'
+Dépassement (trop grand ou trop petit) en calcul flottant
+Dépassement de la place mémoire pour les macros
+La commande précédente doit d'abord être terminée

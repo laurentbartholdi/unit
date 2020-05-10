@@ -1,4 +1,4 @@
-all: unit bin data unit.dta test
+all: unit bin data unit.dta 
 
 UNIT_HOME     = $(HOME)/.unit
 UNIT_HOME_BIN = $(HOME)/bin
@@ -23,6 +23,16 @@ test: unit unit.dta
 install: unit.dta
 	mkdir -p $(UNIT_HOME)
 	install unit.mac unit.asc unit.dta fr/* test.sh  $(UNIT_HOME)
+	install unit $(UNIT_HOME_BIN)
+
+install-fr-u8: unit.dta
+	mkdir -p $(UNIT_HOME)
+	install unit.mac unit.asc unit.dta fr-u8/* test.sh  $(UNIT_HOME)
+	install unit $(UNIT_HOME_BIN)
+
+install-fr-l1: unit.dta
+	mkdir -p $(UNIT_HOME)
+	install unit.mac unit.asc unit.dta fr-l1/* test.sh  $(UNIT_HOME)
 	install unit $(UNIT_HOME_BIN)
 
 install-en: unit.dta

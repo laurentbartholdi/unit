@@ -1,21 +1,22 @@
-===========================  M a c r o s  ===========================  
+= MACROS ======================  M a c r o s  =======================  
 .
-On peut remplacer une sequence de commandes apparaissant souvent par une
-macro, simple a definir.
+On peut remplacer une séquence de commandes apparaissant souvent par une
+macro, simple à définir.
 .
-La forme generale est :   : <nom de la macro>  <suite de commandes> ;
+La forme générale est :   : <nom de la macro>  <suite de commandes> ;
 .
-L'utilisation du nom de la macro declanche l'execution de toute la suite des
+L'utilisation du nom de la macro déclanche l'exécution de toute la suite des
 commandes.
 .
 Exemple :  
-On utilise souvent le volume d'une sphere dont on connait le rayon.
-On va definir une macro 'vs' imprimant le volume en m3, quelque soit la forme
-donnee au rayon.
+On utilise souvent le volume d'une sphère dont on connaît le rayon.
+On va définir une macro 'vs' imprimant le volume en m3, quelque soit la forme
+donnée au rayon.
 .
      : vs  3 ^  4 pi *  3 /  en m3  ;
 .
-que l'on utilisera comme :   3 m vs    ou   5 inch vs  ou   1 rsol vs   etc
+que l'on utilisera comme :   3 m vs    ou   5 inch vs  ou   1 rsol vs   etc.
 .
 On peut lister les macros avec la commande LMAC,  et les sauver dans son
-repertoire avec SMAC dans le fichier `unit.mac' (voir SAVE).
+répertoire avec SMAC dans le fichier "unit".mac (voir SAVE).
+.

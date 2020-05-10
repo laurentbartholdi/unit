@@ -1,23 +1,24 @@
-====================  Fichier personnel d'unites  ====================
+= SAVE ===================  Fichier personnel d'unités  ====================
 .
-Chaque utilisateur peut avoir, s'il le desire, son propre fichier d'unites
-pour pouvoir le modifier a volonte.  Il s'appelle unit.dta et doit resider
-dans le repertoire courant.  C'est un fichier code binaire.  
-S'il existe, il est automatiquement pris a la place du fichier du systeme.
-Pour le creer la premiere fois, il faut utiliser `unit2me',
-sinon il ne contiendra aucune des unites du systeme !
+Chaque utilisateur peut avoir, s'il le désire, son propre fichier d'unités
+pour pouvoir le modifier à volonté.  Il s'appelle unit.dta et doit résider
+dans le répertoire de base de l'utilisateur ($HOME).  C'est un fichier
+codé binaire.  S'il existe, il est automatiquement pris à la place du fichier
+du système.  Pour le créer la première fois, il faut utiliser "unit2me",  sinon
+il ne contiendra aucune des unités de base du système !
 .
-On peut ajouter de nouvelles unites a ce fichier avec la commande WRITE dans
-unit.  On peut aussi utiliser les commandes vms suivantes :
+On peut ajouter de nouvelles unités à ce fichier avec la commande WRITE dans
+unit.  On peut aussi utiliser les commandes shell suivantes :
 .
-    unit2me   recopie le fichier unit.dta du systeme dans le repertoire de
+    unit2me   recopie le fichier unit.dta du système dans le répertoire de
               l'utilisateur.
 .
-    unit2asc  Cree une copie ascii (unit.asc) du fichier binaire.  
-              Cette version peut facilement etre editee (edit, lse etc).
+    data      Crée une copie ascii (unit.asc) du fichier binaire.  
+              Cette version peut facilement âtre éditée (edit, lse etc).
 .
-    unit2bin  Recree une version binaire (unit.dta) a partir du fichier
-              ascii (unit.asc).  Cette operation est necessaire apres une
+    bin       Recrée une version binaire (unit.dta) à partir du fichier
+              ascii (unit.asc).  Cette opération est nécessaire après une
               modification du fichier ascii.
 .
--------->  Voir aussi  COMMANDS,  EXEMPLE,  NEW
+-------->  Voir aussi  COMMANDES,  EXEMPLE,  NEW
+.
