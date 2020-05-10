@@ -1307,8 +1307,8 @@ void	putdms()
 	min = fabs(frac( x.f / 3600.0 ) * 60);
 	sec = fabs(round(frac( frac(x.f/3600.0) * 60 ) * 60));
 
-	if( sec == 60 ) { min = min + hr / fabs(hr); sec = 0; }
-	if( min == 60 ) { hr  = hr + hr / fabs(hr) ; min = 0; }
+	if( sec == 60 ) { min = min + hr / abs(hr); sec = 0; }
+	if( min == 60 ) { hr  = hr  + hr / abs(hr); min = 0; }
 
 	printf( " %d* %d' %d\"     ", hr, min, sec );
 	printf( " %d:%02d:%02d\n", hr, min, sec );
