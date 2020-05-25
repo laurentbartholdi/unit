@@ -4,7 +4,7 @@ Ce programme permet de faire des conversions d'unités d'un système dans un
 autre, de l'arithmétique sur des "unités" diverses pour autant que l'opération
 ait un sens, de créer de nouvelles unités et de les sauver dans un fichier.
 .  
-Toutes les commandes peuvent âtre entrées en minuscules ou en majuscules. Les 
+Toutes les commandes peuvent être entrées en minuscules ou en majuscules. Les 
 instructions sont soit des commandes (DIR, HELP etc), soit des conversions.
 .  
 Les conversions sont de la forme   <expression> EN <unité>.

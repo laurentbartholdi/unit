@@ -14,7 +14,7 @@ unit.  On peut aussi utiliser les commandes shell suivantes :
               l'utilisateur.
 .
     data      Crée une copie ascii (unit.asc) du fichier binaire.  
-              Cette version peut facilement âtre éditée (edit, lse etc).
+              Cette version peut facilement être éditée (edit, lse etc).
 .
     bin       Recrée une version binaire (unit.dta) à partir du fichier
               ascii (unit.asc).  Cette opération est nécessaire après une

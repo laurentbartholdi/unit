@@ -30,7 +30,7 @@ Ce programme permet de faire des conversions d'unités d'un système dans un
 autre, de l'arithmétique sur des "unités" diverses pour autant que l'opération
 ait un sens, de créer de nouvelles unités et de les sauver dans un fichier.
 .  
-Toutes les commandes peuvent âtre entrées en minuscules ou en majuscules. Les 
+Toutes les commandes peuvent être entrées en minuscules ou en majuscules. Les 
 instructions sont soit des commandes (DIR, HELP etc), soit des conversions.
 .  
 Les conversions sont de la forme   <expression> EN <unité>.
@@ -66,9 +66,9 @@ Exemples :  AOS  3 FOOT + 4 INCH EN CM
 .     
 Restrictions :  SQRT ne peut porter que sur des unités d'exposants pairs
                      ex. 4 M2 SQRT
-                SIN COS TAN ne peuvent âtre utilises que pour des arcs
+                SIN COS TAN ne peuvent être utilises que pour des arcs
                      ex  5 RADIAN SIN   2 PI RADIAN COS 
-                Les arguments de LN LOG et L2 doivent âtre positifs.
+                Les arguments de LN LOG et L2 doivent être positifs.
                 L'élévation à une puissance ne peut l'être qu'à 
                 une puissance entière.
 
@@ -193,7 +193,7 @@ unit.  On peut aussi utiliser les commandes shell suivantes :
               l'utilisateur.
 .
     data      Crée une copie ascii (unit.asc) du fichier binaire.  
-              Cette version peut facilement âtre éditée (edit, lse etc).
+              Cette version peut facilement être éditée (edit, lse etc).
 .
     bin       Recrée une version binaire (unit.dta) à partir du fichier
               ascii (unit.asc).  Cette opération est nécessaire après une
